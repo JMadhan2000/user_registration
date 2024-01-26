@@ -1,0 +1,21 @@
+{% extends 'dummy.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block body_block %}
+    <center>
+        <h1>welcome to profile page Mr/Ms {{UO.username}}</h1>
+        <h2>Email is {{UO.email}}</h2>
+        <h2>Address is {{PO.address}}</h2>
+        <h2>Image of profile is </h2>
+        <img src="{{PO.profile_pic.url}}">
+
+    </center>
+    {% endblock %}
+</body>
+</html>'''email username address img'''

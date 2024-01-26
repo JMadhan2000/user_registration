@@ -1,0 +1,25 @@
+{% extends 'dummy.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block body_block %}
+    <center>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="un">username</label>
+            <input type="text" name="un" id="un"><br><br>
+            <label for="pw">password</label>
+            <input type="password" name="pw" id="pw"><br><br>
+            <input type="submit" value="user_login">
+        </form>
+
+        <a href="{% url 'forget_password' %}" class="nav-link">forget_password</a>
+    </center>
+    {% endblock %}
+</body>
+</html>
